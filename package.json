@@ -2,11 +2,16 @@
   "name": "turbo-expo-trpc-starter",
   "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*",
-    "services/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*",
+      "services/*"
+    ],
+    "nohoist": [
+      "expo-router"
+    ]
+  },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
