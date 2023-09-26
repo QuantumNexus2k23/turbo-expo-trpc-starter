@@ -11,5 +11,7 @@
     "dev": {
       "cache": false
     }
-  }
+  },
+  "globalEnv": ["JWT_ACCESS_SECRET", "JWT_REFRESH_SECRET"],
+  "globalDependencies": [".env"]
 }

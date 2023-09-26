@@ -1,5 +1,11 @@
-import { Pressable, Text } from 'react-native'
+import { Pressable, Text } from "react-native";
+import { ButtonProps } from "./types";
+import { FC } from "react";
 
-export const Button = () => {
-  return <Pressable><Text>Boop</Text></Pressable>;
+export const Button: FC<ButtonProps> = ({ onPress, children }) => {
+  return (
+    <Pressable onPress={onPress}>
+      <Text>{children}</Text>
+    </Pressable>
+  );
 };
